@@ -13,9 +13,11 @@ public class PlayerMovemnt : MonoBehaviour
 
     [SerializeField] private float _currentFuel;
     [SerializeField] private Image fuelImage;
+    private Animator _animator;
 
     private void Start()
     {
+        _animator = GetComponent<Animator>();
         if (_rigidbody == null)
         {
             _rigidbody = GetComponent<Rigidbody>();
@@ -49,6 +51,16 @@ public class PlayerMovemnt : MonoBehaviour
         Vector3 currentVelocity = _rigidbody.velocity;
         Vector3 newVelocity = new(xInput * _moveSpeed, currentVelocity.y, currentVelocity.z);
         _rigidbody.velocity = newVelocity;
+        Debug.Log("Current velocity: " + currentVelocity);
+        if(Mathf.Abs(xInput) > 0)
+        {
+            Debug.Log("getting called");
+            _animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            _animator.SetBool("IsWalking", false);
+        }
     }
 
     public void FillFuel(float fillMultiplier)

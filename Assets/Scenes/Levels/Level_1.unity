@@ -202,7 +202,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 20.78461
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857670}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07803307, y: 0, z: 0, w: 0.9969508}
+  m_LocalRotation: {x: 0.07797495, y: -0.038624972, z: 0.0030232626, w: 0.99620223}
   m_LocalPosition: {x: 0, y: 16.16, z: -26.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5352,7 +5352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846657942}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07803307, y: 0, z: 0, w: 0.9969508}
+  m_LocalRotation: {x: 0.07797495, y: -0.038624972, z: 0.0030232626, w: 0.99620223}
   m_LocalPosition: {x: 0, y: 16.16, z: -26.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
