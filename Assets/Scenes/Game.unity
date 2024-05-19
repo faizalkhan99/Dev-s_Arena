@@ -7601,6 +7601,7 @@ GameObject:
   - component: {fileID: 1965163087}
   - component: {fileID: 1965163086}
   - component: {fileID: 1965163085}
+  - component: {fileID: 1965163089}
   m_Layer: 0
   m_Name: Win Point
   m_TagString: Untagged
@@ -7623,7 +7624,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7694,6 +7695,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965163089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965163084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1edaddecf930e842a3f85b0fbead206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyRequired: 0
 --- !u!1001 &2001342733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8299,6 +8313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flyingForce: 3
   _moveSpeed: 10
+  _maxFuel: 0
+  _fuelUsageMultiplier: 1
 --- !u!1 &2079671416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c086324b02f2a0e489001e48992218ab, type: 3}
@@ -8770,9 +8786,10 @@ GameObject:
   - component: {fileID: 1886634112934969551}
   - component: {fileID: 1886634112934969550}
   - component: {fileID: 1886634112934969549}
+  - component: {fileID: 1886634112934969552}
   m_Layer: 0
   m_Name: astronaut
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8881,8 +8898,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7665dc4746f0f46418289640dc41d2c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flyingForce: 3
+  _flyingForce: 0.5
   _moveSpeed: 10
+  _maxFuel: 0
+  _fuelUsageMultiplier: 1
 --- !u!136 &1886634112934969551
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8906,6 +8925,19 @@ CapsuleCollider:
   m_Height: 4.629941
   m_Direction: 1
   m_Center: {x: 0.02269268, y: 2.2708402, z: -0.16018659}
+--- !u!114 &1886634112934969552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253543406788926070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933eb06d2d2a9704b8e60660111134ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasKey: 0
 --- !u!1 &1952763844547260163
 GameObject:
   m_ObjectHideFlags: 0
