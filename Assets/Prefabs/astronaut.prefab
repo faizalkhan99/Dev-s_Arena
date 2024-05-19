@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 10845788631074958}
   - component: {fileID: 5409748054804133087}
   - component: {fileID: 3325468926244741996}
+  - component: {fileID: 3054718383457542044}
   m_Layer: 0
   m_Name: astronaut
   m_TagString: Player
@@ -379,6 +380,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HasKey: 0
+--- !u!114 &3054718383457542044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165096040138318913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f82348b3c300db43bedc09cc38e0b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDead: 0
 --- !u!1 &2443641508788993157
 GameObject:
   m_ObjectHideFlags: 0

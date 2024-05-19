@@ -65,6 +65,13 @@ public class PlayerMovemnt : MonoBehaviour
 
     public void FillFuel(float fillMultiplier)
     {
-        _currentFuel += Time.deltaTime * fillMultiplier;
+        if (_currentFuel <= _maxFuel)
+        {
+            _currentFuel += Time.deltaTime * fillMultiplier;
+        }
+        else
+        {
+            _currentFuel = _maxFuel;
+        }
     }
 }
