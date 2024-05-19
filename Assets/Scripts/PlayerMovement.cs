@@ -11,7 +11,7 @@ public class PlayerMovemnt : MonoBehaviour
     [SerializeField] private float _maxFuel;
     [SerializeField] private float _fuelUsageMultiplier = 1f;
 
-    private float _currentFuel;
+    [SerializeField] private float _currentFuel;
     [SerializeField] private Image fuelImage;
 
     private void Start()
