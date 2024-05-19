@@ -274,7 +274,8 @@ GameObject:
   - component: {fileID: 10845788631074958}
   - component: {fileID: 5409748054804133087}
   - component: {fileID: 3325468926244741996}
-  - component: {fileID: 3054718383457542044}
+  - component: {fileID: 1027549462541230160}
+  - component: {fileID: -6563211815641257892}
   m_Layer: 0
   m_Name: astronaut
   m_TagString: Player
@@ -339,6 +340,7 @@ MonoBehaviour:
   _moveSpeed: 10
   _maxFuel: 100
   _fuelUsageMultiplier: 30
+  _currentFuel: 0
   fuelImage: {fileID: 8071932810734989805}
 --- !u!54 &5409748054804133087
 Rigidbody:
@@ -380,7 +382,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HasKey: 0
---- !u!114 &3054718383457542044
+--- !u!95 &1027549462541230160
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165096040138318913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc81d1534a3ca2543a1c76c32a6969d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6563211815641257892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

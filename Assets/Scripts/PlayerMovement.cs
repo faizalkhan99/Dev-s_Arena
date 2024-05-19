@@ -17,7 +17,7 @@ public class PlayerMovemnt : MonoBehaviour
 
     private void Start()
     {
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
         if (_rigidbody == null)
         {
             _rigidbody = GetComponent<Rigidbody>();
