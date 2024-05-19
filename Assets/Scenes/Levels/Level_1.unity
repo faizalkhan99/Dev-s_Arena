@@ -11415,10 +11415,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3026437664871889890, guid: 7c423f6c01dea854a90bc5fd10514d48, type: 3}
-      propertyPath: fuelImage
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11432,10 +11428,10 @@ SceneRoots:
   - {fileID: 446775030}
   - {fileID: 857674}
   - {fileID: 846657944}
+  - {fileID: 1582861063418576232}
   - {fileID: 2006257199}
   - {fileID: 636061494}
   - {fileID: 425773624}
   - {fileID: 1764567685}
   - {fileID: 919988518}
   - {fileID: 666226393}
-  - {fileID: 1582861063418576232}

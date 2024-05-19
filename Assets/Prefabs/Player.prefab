@@ -101,11 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flyingForce: 0.5
-  _moveSpeed: 10
+  _moveSpeed: 5
   _maxFuel: 100
   _fuelUsageMultiplier: 30
   _currentFuel: 0
-  fuelImage: {fileID: 0}
+  fuelImage: {fileID: 3401971620093057060}
 --- !u!114 &2538537186088322774
 MonoBehaviour:
   m_ObjectHideFlags: 0
