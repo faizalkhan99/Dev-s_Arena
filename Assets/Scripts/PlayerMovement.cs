@@ -8,6 +8,12 @@ public class PlayerMovemnt : MonoBehaviour
     [SerializeField] private float _rotSpeed;
     [SerializeField] private ParticleSystem[] jetParticle;
     [SerializeField] private Transform gfx;
+
+    [Space(8f)]
+    [SerializeField] private Transform _playerUI;
+
+    [SerializeField] private Vector3 _offset;
+
     private Rigidbody _rigidbody;
     private Vector3 _upForce = new(0, 1, 0);
 
@@ -68,6 +74,7 @@ public class PlayerMovemnt : MonoBehaviour
     private void LateUpdate()
     {
         gfx.localPosition = Vector3.zero;
+        _playerUI.position = transform.position + _offset;
     }
 
     private void HandleMovement()
