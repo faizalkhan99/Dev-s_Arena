@@ -18,7 +18,6 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
         BGSource = GetComponent<AudioSource>();
         PlayAudio(BGSource, "BG");
     }

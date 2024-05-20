@@ -13,6 +13,7 @@ public class SceneTransition : MonoBehaviour
 
     public void LoadScene(int buildIndex)
     {
+        GetComponent<AudioSource>().Play();
         LeanTween.alphaCanvas(grp, 1, 0.5f).setOnComplete(() =>
         {
             StartCoroutine(StartLoading(buildIndex));
