@@ -1102,10 +1102,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransitionCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 468986281282208158, guid: ada3fa10fa49cd24cbc22fd460559535, type: 3}
-      propertyPath: m_TagString
-      value: SceneTransition
-      objectReference: {fileID: 0}
     - target: {fileID: 5896141469394379415, guid: ada3fa10fa49cd24cbc22fd460559535, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1185,10 +1181,6 @@ PrefabInstance:
     - target: {fileID: 5896141469394379415, guid: ada3fa10fa49cd24cbc22fd460559535, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8305250055274955883, guid: ada3fa10fa49cd24cbc22fd460559535, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8836,6 +8828,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 730225363930981818, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415017839813067037, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354035693258196179, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824791344711065515, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503382140254329107, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882100828982647994, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882100828982647994, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882100828982647994, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -725
+      objectReference: {fileID: 0}
     - target: {fileID: 6667195755530061038, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8914,6 +8938,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6667195755530061038, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831765660390893956, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839047967147493713, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259657562473817981, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8471752699378533761, guid: b3f907121c211cf4780a2d8ef7145003, type: 3}

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeTimimg: 2
-  detectionRange: 10
+  detectionRange: 2.5
   damageRange: 10
   playerLayer:
     serializedVersion: 2
@@ -133,7 +133,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7576236752547641047}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

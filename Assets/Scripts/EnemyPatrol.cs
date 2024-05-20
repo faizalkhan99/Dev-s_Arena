@@ -56,10 +56,14 @@ public class EnemyPatrol : MonoBehaviour
                 else
                 {
                     currentTimeToDetect -= Time.deltaTime;
-                    circle.transform.localScale -= Vector3.one * Time.deltaTime * detectionRadius / maxTimeToDetect;
+
                     if (circle.transform.localScale.x <= 0)
                     {
                         circle.transform.localScale = Vector3.zero;
+                    }
+                    else
+                    {
+                        circle.transform.localScale -= Vector3.one * Time.deltaTime * detectionRadius / maxTimeToDetect;
                     }
                 }
             }
