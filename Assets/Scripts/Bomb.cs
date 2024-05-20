@@ -24,12 +24,22 @@ public class Bomb : MonoBehaviour
                     if (col.TryGetComponent<PlayerHealthManager>(out var playerHealth))
                     {
                         isDetected = true;
-                        StartCoroutine(StartCountDown(playerHealth));
                         circle = transform.GetChild(0).gameObject;
-                        LeanTween.scale(circle, new Vector3(damageRange * 2, damageRange * 2, damageRange * 2), explodeTimimg);
+                        LeanTween.scale(circle, new Vector3(damageRange * 2, damageRange * 2, damageRange * 2), explodeTimimg).setOnComplete(() =>
+                        {
+                            Boom(playerHealth);
+                        });
                         break;
                     }
+                    else
+                    {
+                        isDetected = false;
+                    }
                 }
+            }
+            else
+            {
+                isDetected = false;
             }
         }
     }
@@ -56,8 +66,22 @@ public class Bomb : MonoBehaviour
 
     private void Boom(PlayerHealthManager healthManager)
     {
-        particle.Play();
-        healthManager.KillPlayer();
-        Destroy(gameObject, 0.75f);
+        Collider[] cols = Physics.OverlapSphere(transform.position, detectionRange, playerLayer);
+        if (cols != null && cols.Length > 0)
+        {
+            foreach (var col in cols)
+            {
+                if (col.TryGetComponent<PlayerHealthManager>(out var playerHealth))
+                {
+                    healthManager.KillPlayer();
+                }
+            }
+        }
+        if (!particle.isPlaying)
+        {
+            particle.Play();
+        }
+        GetComponent<MeshRenderer>().enabled = false;
+        Destroy(gameObject, 1f);
     }
 }
