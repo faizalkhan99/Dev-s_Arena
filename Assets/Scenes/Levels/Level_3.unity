@@ -928,6 +928,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111421209}
   m_Mesh: {fileID: -3942242966779429650, guid: 81b067b0af5fe5e488cbffe7d6ae6365, type: 3}
+--- !u!114 &112057229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7080873646975804854, guid: 3940947f5271f2b4b912d2c83b809d07, type: 3}
+  m_PrefabInstance: {fileID: 887288743}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &113469657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2449,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387539064}
+  - component: {fileID: 387539066}
+  - component: {fileID: 387539065}
   m_Layer: 0
   m_Name: Spike Setup_2
   m_TagString: Untagged
@@ -2489,6 +2502,39 @@ Transform:
   - {fileID: 1321606916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &387539065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387539063}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.973511, y: 3.2126675, z: 1}
+  m_Center: {x: -1.7503166, y: 0.049536705, z: 0}
+--- !u!114 &387539066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387539063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4376c808e9dbc4645a8b698a78326134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &405196959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3098,7 +3144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f176f55340735d44bc6a4239f5abe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _indicatorText: {fileID: 0}
+  _indicatorText: {fileID: 902993560}
 --- !u!1 &460708150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,7 +4572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f176f55340735d44bc6a4239f5abe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _indicatorText: {fileID: 0}
+  _indicatorText: {fileID: 902993560}
 --- !u!1 &643761005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c086324b02f2a0e489001e48992218ab, type: 3}
@@ -6796,6 +6842,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 374712289235978524, guid: 3940947f5271f2b4b912d2c83b809d07, type: 3}
+      propertyPath: m_Name
+      value: PlayerMovingUI
+      objectReference: {fileID: 0}
     - target: {fileID: 7869944158244908719, guid: 3940947f5271f2b4b912d2c83b809d07, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.3
@@ -6836,15 +6886,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 374712289235978524, guid: 3940947f5271f2b4b912d2c83b809d07, type: 3}
-      propertyPath: m_Name
-      value: PlayerMovingUI
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3940947f5271f2b4b912d2c83b809d07, type: 3}
+--- !u!114 &902993560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1987404816508726233, guid: 3940947f5271f2b4b912d2c83b809d07, type: 3}
+  m_PrefabInstance: {fileID: 887288743}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &905016366
 GameObject:
   m_ObjectHideFlags: 0
@@ -8914,6 +8971,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264411960}
+  - component: {fileID: 1264411962}
+  - component: {fileID: 1264411961}
   m_Layer: 0
   m_Name: Spike Setup_1
   m_TagString: Untagged
@@ -8975,6 +9034,39 @@ Transform:
   - {fileID: 1275676515}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264411961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264411959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4376c808e9dbc4645a8b698a78326134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1264411962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264411959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15.332793, y: 3.6419888, z: 1}
+  m_Center: {x: -1.0237718, y: 0.06605053, z: 0}
 --- !u!1001 &1275676514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11938,7 +12030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f176f55340735d44bc6a4239f5abe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _indicatorText: {fileID: 0}
+  _indicatorText: {fileID: 902993560}
 --- !u!1 &1600036416
 GameObject:
   m_ObjectHideFlags: 0
@@ -15740,7 +15832,7 @@ PrefabInstance:
     - target: {fileID: 3026437664871889890, guid: 7c423f6c01dea854a90bc5fd10514d48, type: 3}
       propertyPath: fuelImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 112057229}
     - target: {fileID: 6001232148182256503, guid: 7c423f6c01dea854a90bc5fd10514d48, type: 3}
       propertyPath: deadScreen
       value: 
