@@ -7,6 +7,7 @@ public class PlayerMovemnt : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotSpeed;
     [SerializeField] private ParticleSystem[] jetParticle;
+    [SerializeField] private Transform gfx;
     private Rigidbody _rigidbody;
     private Vector3 _upForce = new(0, 1, 0);
 
@@ -60,6 +61,11 @@ public class PlayerMovemnt : MonoBehaviour
                 particle.Stop();
             }
         }
+    }
+
+    private void LateUpdate()
+    {
+        gfx.localPosition = Vector3.zero;
     }
 
     private void HandleMovement()

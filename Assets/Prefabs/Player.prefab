@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3026437664871889890}
   - component: {fileID: 2538537186088322774}
   - component: {fileID: 6001232148182256503}
+  - component: {fileID: 4924415304133936113}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -47,7 +48,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932078269858238096}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 65
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -137,6 +138,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
+--- !u!114 &4924415304133936113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932078269858238096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b03f270a45e3f47b55ae6663cb7e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
 --- !u!1 &1976246945024355012
 GameObject:
   m_ObjectHideFlags: 0
