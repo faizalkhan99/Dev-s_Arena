@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerKeyManager : MonoBehaviour
@@ -11,6 +9,7 @@ public class PlayerKeyManager : MonoBehaviour
         if (collision.collider.CompareTag("Key"))
         {
             HasKey = true;
+            collision.gameObject.SetActive(false);
         }
     }
 }

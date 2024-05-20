@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - name: BG
-    audioClip: {fileID: 8300000, guid: edba611809d4e724399bab5476d26bb5, type: 3}
-    vol: 0.5
+    audioClip: {fileID: 8300000, guid: fc1db0419d1eb014dbdedfdabf02bb50, type: 3}
+    vol: 1
     isLoop: 1
 --- !u!82 &8175878343842082122
 AudioSource:

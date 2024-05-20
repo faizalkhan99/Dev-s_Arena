@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - BrokenFloor
+  - SceneTransition
   layers:
   - Default
   - TransparentFX

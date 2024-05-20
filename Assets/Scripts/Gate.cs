@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gate : MonoBehaviour
 {
     [SerializeField] private bool keyRequired;
+    [SerializeField] private int _buildIndexToLoadNext;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,12 +14,13 @@ public class Gate : MonoBehaviour
             {
                 if (other.GetComponent<PlayerKeyManager>().HasKey)
                 {
-                    //Do scene transition
+                    GameObject.FindGameObjectWithTag("SceneTransition").GetComponent<SceneTransition>().LoadScene(_buildIndexToLoadNext);
                 }
             }
+
             else
             {
-                //Do scene Transition
+                GameObject.FindGameObjectWithTag("SceneTransition").GetComponent<SceneTransition>().LoadScene(_buildIndexToLoadNext);
             }
         }
     }
