@@ -5,6 +5,9 @@ public class PlayerMovemnt : MonoBehaviour
 {
     [SerializeField] private float _flyingForce;
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _rotSpeed;
+    [SerializeField] private ParticleSystem[] jetParticle;
+    [SerializeField] private Transform gfx;
     private Rigidbody _rigidbody;
     private Vector3 _upForce = new(0, 1, 0);
 
@@ -40,9 +43,29 @@ public class PlayerMovemnt : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && _currentFuel > 0)
         {
+            foreach (var particle in jetParticle)
+            {
+                if (!particle.isPlaying)
+                {
+                    particle.Play();
+                }
+            }
+
             _rigidbody.AddForce((1000 * _flyingForce) * Time.fixedDeltaTime * _upForce, ForceMode.Acceleration);
             _currentFuel -= Time.deltaTime * _fuelUsageMultiplier;
         }
+        else
+        {
+            foreach (var particle in jetParticle)
+            {
+                particle.Stop();
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        gfx.localPosition = Vector3.zero;
     }
 
     private void HandleMovement()
@@ -51,14 +74,9 @@ public class PlayerMovemnt : MonoBehaviour
         Vector3 currentVelocity = _rigidbody.velocity;
         Vector3 newVelocity = new(xInput * _moveSpeed, currentVelocity.y, currentVelocity.z);
         _rigidbody.velocity = newVelocity;
-        if(Mathf.Abs(xInput) > 0)
-        {
-            _animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            _animator.SetBool("IsWalking", false);
-        }
+        _animator.SetBool("IsWalking", Mathf.Abs(xInput) > 0);
+        Quaternion targetRotation = Quaternion.LookRotation(new(-xInput, 0, 0));
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotSpeed * 100 * Time.deltaTime);
     }
 
     public void FillFuel(float fillMultiplier)
