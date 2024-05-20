@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4858039477671745091}
   - component: {fileID: 7812796837347875413}
   - component: {fileID: 4909800576646570252}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor-panel-straight_cell.002
   m_TagString: BrokenFloor
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 8998149875251796963}
   - component: {fileID: 4017609807470929370}
   - component: {fileID: 8988637587748887139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor-panel-straight_cell
   m_TagString: BrokenFloor
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8066294082192939863}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BrokenFloor (1)
   m_TagString: BrokenFloor
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 5258320552911273704}
   - component: {fileID: 2755363143458473424}
   - component: {fileID: 4309869956971139546}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor-panel-straight_cell.001
   m_TagString: BrokenFloor
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 2100829663296388813}
   - component: {fileID: 771798490836319336}
   - component: {fileID: 4001009785883184216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor-panel-straight_cell.004
   m_TagString: BrokenFloor
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 3494283340542739483}
   - component: {fileID: 9057089924313398866}
   - component: {fileID: 3000610267535041654}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor-panel-straight_cell.003
   m_TagString: BrokenFloor
   m_Icon: {fileID: 0}

@@ -11,10 +11,15 @@ public class EnemyPatrol : MonoBehaviour
 
     [SerializeField] private float minWaitTime, maxWaitTime;
     private int nextIndex;
+    private SpriteRenderer circle;
+
+    [SerializeField] private float maxTimeToDetect;
+    private float currentTimeToDetect;
 
     // Start is called before the first frame update
     private void Start()
     {
+        circle = GetComponentInChildren<SpriteRenderer>();
         if (patrolPoints.Length != 0)
         {
             transform.position = patrolPoints[0].position;
@@ -36,11 +41,35 @@ public class EnemyPatrol : MonoBehaviour
             {
                 if (col.TryGetComponent<PlayerHealthManager>(out var playerHealth))
                 {
-                    playerHealth.KillPlayer();
+                    currentTimeToDetect += Time.deltaTime;
+                    circle.transform.localScale += Vector3.one * Time.deltaTime * detectionRadius / maxTimeToDetect;
+                    if (currentTimeToDetect >= maxTimeToDetect)
+                    {
+                        playerHealth.KillPlayer();
+                    }
+                    if (circle.transform.localScale.x > detectionRadius)
+                    {
+                        circle.transform.localScale = new(detectionRadius, detectionRadius);
+                    }
                     break;
+                }
+                else
+                {
+                    currentTimeToDetect -= Time.deltaTime;
+                    circle.transform.localScale -= Vector3.one * Time.deltaTime * detectionRadius / maxTimeToDetect;
+                    if (circle.transform.localScale.x <= 0)
+                    {
+                        circle.transform.localScale = Vector3.zero;
+                    }
                 }
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 
     private void StartPatrol()

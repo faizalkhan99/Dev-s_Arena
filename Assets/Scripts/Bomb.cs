@@ -8,7 +8,8 @@ public class Bomb : MonoBehaviour
     [SerializeField] private float detectionRange;
     [SerializeField] private float damageRange;
     [SerializeField] private LayerMask playerLayer;
-
+    [SerializeField] private ParticleSystem particle;
+    private GameObject circle;
     private bool isDetected;
 
     private void Update()
@@ -24,6 +25,8 @@ public class Bomb : MonoBehaviour
                     {
                         isDetected = true;
                         StartCoroutine(StartCountDown(playerHealth));
+                        circle = transform.GetChild(0).gameObject;
+                        LeanTween.scale(circle, new Vector3(damageRange * 2, damageRange * 2, damageRange * 2), explodeTimimg);
                         break;
                     }
                 }
@@ -43,8 +46,18 @@ public class Bomb : MonoBehaviour
         Boom(healthManager);
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, damageRange);
+    }
+
     private void Boom(PlayerHealthManager healthManager)
     {
+        particle.Play();
         healthManager.KillPlayer();
+        Destroy(gameObject, 0.75f);
     }
 }

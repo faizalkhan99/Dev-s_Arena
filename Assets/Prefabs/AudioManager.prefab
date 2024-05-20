@@ -50,6 +50,14 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: fc1db0419d1eb014dbdedfdabf02bb50, type: 3}
     vol: 1
     isLoop: 1
+  - name: Jet
+    audioClip: {fileID: 8300000, guid: 6e5b84d7777302f44b06cf0fedec1dcb, type: 3}
+    vol: 1
+    isLoop: 1
+  - name: Level
+    audioClip: {fileID: 8300000, guid: f4afa59c6711d8943a5e6a422592bbcd, type: 3}
+    vol: 1
+    isLoop: 1
 --- !u!82 &8175878343842082122
 AudioSource:
   m_ObjectHideFlags: 0

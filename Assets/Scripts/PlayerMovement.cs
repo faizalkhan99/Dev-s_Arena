@@ -23,6 +23,7 @@ public class PlayerMovemnt : MonoBehaviour
     [SerializeField] private float _currentFuel;
     [SerializeField] private Image fuelImage;
     private Animator _animator;
+    private AudioSource _audioSource;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class PlayerMovemnt : MonoBehaviour
             _rigidbody = GetComponent<Rigidbody>();
         }
         _currentFuel = _maxFuel;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -55,6 +57,10 @@ public class PlayerMovemnt : MonoBehaviour
                 {
                     particle.Play();
                     _animator.SetBool("isFlying", true);
+                    if (!_audioSource.isPlaying)
+                    {
+                        _audioSource.Play();
+                    }
                 }
             }
 
@@ -67,6 +73,7 @@ public class PlayerMovemnt : MonoBehaviour
             {
                 particle.Stop();
                 _animator.SetBool("isFlying", false);
+                _audioSource.Stop();
             }
         }
     }
@@ -74,6 +81,7 @@ public class PlayerMovemnt : MonoBehaviour
     private void LateUpdate()
     {
         gfx.localPosition = Vector3.zero;
+        gfx.localRotation = Quaternion.Euler(0, 180, 0);
         _playerUI.position = transform.position + _offset;
     }
 
