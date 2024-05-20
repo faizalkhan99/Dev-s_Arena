@@ -48,6 +48,7 @@ public class PlayerMovemnt : MonoBehaviour
                 if (!particle.isPlaying)
                 {
                     particle.Play();
+                    _animator.SetBool("isFlying", true);
                 }
             }
 
@@ -59,6 +60,7 @@ public class PlayerMovemnt : MonoBehaviour
             foreach (var particle in jetParticle)
             {
                 particle.Stop();
+                _animator.SetBool("isFlying", false);
             }
         }
     }
