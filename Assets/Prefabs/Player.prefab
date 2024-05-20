@@ -109,10 +109,10 @@ MonoBehaviour:
   - {fileID: 9210813326027061420}
   gfx: {fileID: 9018515191854228270}
   _playerUI: {fileID: 0}
-  _offset: {x: -1, y: 0, z: 0}
+  _offset: {x: -2, y: 3.25, z: 0}
   _maxFuel: 100
   _fuelUsageMultiplier: 30
-  _currentFuel: 0
+  _currentFuel: 100
   fuelImage: {fileID: 0}
 --- !u!114 &2538537186088322774
 MonoBehaviour:
